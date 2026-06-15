@@ -7,7 +7,6 @@ import { Calendar } from "./component/calendar"
 import { Gallery } from "./component/gallery"
 import { Information } from "./component/information"
 import { LazyDiv } from "./component/lazyDiv"
-import { ShareButton } from "./component/shareButton"
 
 /**
  * 메인 애플리케이션 컴포넌트입니다.
@@ -46,9 +45,6 @@ function App() {
           {/* 축의금 및 연락처 정보 섹션 */}
           <Information />
         </LazyDiv>
-
-        {/* 카카오톡/링크 공유 버튼 */}
-        <ShareButton />
       </div>
     </div>
   )
