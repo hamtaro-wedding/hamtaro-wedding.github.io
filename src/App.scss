@@ -8,14 +8,14 @@
 @use "./component/modal";
 
 :root {
-  --theme-color: #7eb8b4;
-  --theme-bg-color: #f7f5f0;
-  --alt-color: #c4a35a;
-  --alt-bg-color: #f9f9f7;
-  --dark-color: #2c3e50;
+  --theme-color: #c9a96e;
+  --theme-bg-color: #2c3659;
+  --alt-color: #c9a96e;
+  --alt-bg-color: #f8f7f4;
+  --dark-color: #333333;
   --dark-grey-color: #d5d5d5;
   --light-grey-color: #eeeeee;
-  --light-color: #ffffff;
+  --light-color: #faf9f7;
   --white-color: #ffffff;
   --red-color: #c75050;
 
@@ -98,7 +98,7 @@ body {
 }
 
 .background {
-  background-color: var(--theme-bg-color);
+  background-color: #f5f4f0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -200,6 +200,7 @@ h2 {
   font-size: 1.5rem;
   color: var(--dark-color);
   font-weight: normal;
+  letter-spacing: 0.3rem;
   &.english {
     font-family: "Allura";
     color: var(--theme-color);
