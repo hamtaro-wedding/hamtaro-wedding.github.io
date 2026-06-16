@@ -2,6 +2,7 @@ import CarIcon from "../../icons/car-icon.svg?react"
 import BusIcon from "../../icons/bus-icon.svg?react"
 import { LazyDiv } from "../lazyDiv"
 import { LOCATION, LOCATION_ADDRESS } from "../../const"
+import mapImage from "../../images/map.png"
 
 /**
  * 오시는 길 정보를 표시하는 컴포넌트입니다.
@@ -17,6 +18,7 @@ export const Location = () => {
           {LOCATION}
           <div className="detail">{LOCATION_ADDRESS}</div>
         </div>
+        <img src={mapImage} alt="약도" className="map-image" />
       </LazyDiv>
 
       <LazyDiv className="card location">
