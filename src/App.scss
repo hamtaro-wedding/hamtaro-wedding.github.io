@@ -98,7 +98,7 @@ body {
 }
 
 .background {
-  background-color: #f5f4f0;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,9 +123,9 @@ body {
       @media (width > 980px) {
         display: flex;
         flex-direction: row;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
         margin: 10px;
-        background-color: var(--light-color);
+        background-color: var(--white-color);
 
         opacity: 0;
         &.lazy-active {
@@ -142,9 +142,9 @@ body {
       }
 
       .card {
-        background-color: var(--light-color);
+        background-color: var(--white-color);
         padding: 1rem;
-        border: 1px solid var(--light-grey-color);
+        border: none;
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -152,8 +152,8 @@ body {
         position: relative;
 
         @media (max-width: 980px) {
-          box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
-          margin: 0.5rem;
+          box-shadow: none;
+          margin: 0;
           width: inherit;
 
           opacity: 0;
