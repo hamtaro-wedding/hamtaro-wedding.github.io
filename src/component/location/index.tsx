@@ -51,7 +51,7 @@ export const Location = () => {
           <div className="heading">자가용</div>
           <div />
           <div className="content">
-            네이버 지도, 카카오 내비, 티맵 등
+            티맵, 네이버 지도, 카카오 내비 등
             <br />
             <b>천주교천호동성당</b> 검색
             <br />
