@@ -5,7 +5,9 @@
   background-position: center !important;
   border: none !important;
   padding: 2rem !important;
-  min-height: 90vh;
+  height: 90vh;
+  max-height: 90vh;
+  overflow: hidden;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
