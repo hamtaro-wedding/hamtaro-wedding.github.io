@@ -102,7 +102,6 @@ export const BRIDE_INFO = [
 export const GROOM_FULLNAME = "김기현"
 export const GROOM_FIRSTNAME = "기현"
 export const GROOM_TITLE = "장남"
-export const GROOM_FATHER = "김상환"
 export const GROOM_MOTHER = "배복희"
 
 /**
@@ -113,13 +112,7 @@ export const GROOM_INFO = [
     relation: "신랑",
     name: GROOM_FULLNAME,
     phone: "010-3434-7978",
-    account: "하나은행 00000000000000",
-  },
-  {
-    relation: "신랑 아버지",
-    name: GROOM_FATHER,
-    phone: "010-0000-0000",
-    account: "신한은행 000000000000",
+    account: "국민은행 74670201346812",
   },
   {
     relation: "신랑 어머니",

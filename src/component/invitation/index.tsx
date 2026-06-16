@@ -6,7 +6,6 @@ import {
   BRIDE_MOTHER,
   GROOM_FULLNAME,
   GROOM_INFO,
-  GROOM_FATHER,
   GROOM_MOTHER,
   GROOM_TITLE,
   BRIDE_TITLE,
@@ -43,7 +42,7 @@ export const Invitation = () => {
 
         {/* 혼주 및 신랑 정보 */}
         <div className="name">
-          {GROOM_FATHER} · {GROOM_MOTHER}
+          {GROOM_MOTHER}
           <span className="relation">
             의 <span className="relation-name">{GROOM_TITLE}</span>
           </span>{" "}
@@ -78,9 +77,6 @@ export const Invitation = () => {
         <div className="header">
           <div className="title-group">
             <div className="title">축하 인사 전하기</div>
-            <div className="subtitle">
-              전화, 문자메세지로 축하 인사를 전해보세요.
-            </div>
           </div>
         </div>
 

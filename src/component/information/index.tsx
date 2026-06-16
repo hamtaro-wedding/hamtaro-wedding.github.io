@@ -71,22 +71,22 @@ export const Information = () => {
         <div className="info-card">
           <div className="label">마음 전하기</div>
           <div className="content">
-            참석이 어려우신 분들은
+            함께하지 못하셔도 마음만으로 감사합니다.
             <br />
-            축하의 마음을 전해주세요.
+            축하를 전하고 싶으신 분들을 위해 안내드립니다.
           </div>
+
+          <div className="break" />
+
+          <AccountAccordion
+            title="신랑측 계좌번호"
+            items={GROOM_INFO}
+          />
+          <AccountAccordion
+            title="신부측 계좌번호"
+            items={BRIDE_INFO}
+          />
         </div>
-
-        <div className="break" />
-
-        <AccountAccordion
-          title="신랑측 계좌번호"
-          items={GROOM_INFO}
-        />
-        <AccountAccordion
-          title="신부측 계좌번호"
-          items={BRIDE_INFO}
-        />
       </LazyDiv>
 
       <LazyDiv className="card information">
