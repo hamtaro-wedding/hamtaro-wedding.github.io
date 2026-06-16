@@ -1,4 +1,15 @@
 .information {
+  @keyframes accordion-open {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 30rem;
+      opacity: 1;
+    }
+  }
+
   .info-card {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -48,6 +59,8 @@
 
     .accordion-body {
       padding: 0.8rem 0.5rem;
+      overflow: hidden;
+      animation: accordion-open 0.25s ease-out;
 
       .account-item {
         display: flex;
