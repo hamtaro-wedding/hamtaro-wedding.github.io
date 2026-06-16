@@ -1,6 +1,19 @@
 .invitation {
   background-color: var(--white-color) !important;
   border: none !important;
+  position: relative;
+  padding: 3rem 2rem !important;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    border: 1px solid var(--theme-color);
+    pointer-events: none;
+  }
 
   .content {
     margin-top: 0.8rem;
