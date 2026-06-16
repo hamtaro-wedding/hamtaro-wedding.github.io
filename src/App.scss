@@ -1,7 +1,6 @@
 @use "./component/cover";
 @use "./component/invitation";
 @use "./component/button";
-@use "./component/bgEffect";
 @use "./component/calendar";
 @use "./component/gallery";
 @use "./component/location";
@@ -10,7 +9,7 @@
 
 :root {
   --theme-color: #7eb8b4;
-  --theme-bg-color: #ffffff;
+  --theme-bg-color: #f7f5f0;
   --alt-color: #c4a35a;
   --alt-bg-color: #f9f9f7;
   --dark-color: #2c3e50;
