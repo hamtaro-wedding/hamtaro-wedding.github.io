@@ -3,10 +3,10 @@
   border: 1px solid var(--theme-color) !important;
   padding: 4rem 1rem !important;
   min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
 
   .header {
     text-align: center;
