@@ -9,18 +9,18 @@
 @use "./component/modal";
 
 :root {
-  --theme-color: #ff8585;
-  --theme-bg-color: #ffe7e7;
-  --alt-color: #c28080;
-  --alt-bg-color: #f4f0f0;
-  --dark-color: #282c34;
-  --dark-grey-color: #d2d2d2;
-  --light-grey-color: #eaeaea;
-  --light-color: #f9f9f9;
+  --theme-color: #b08968;
+  --theme-bg-color: #faf6f1;
+  --alt-color: #8c6d53;
+  --alt-bg-color: #f5efe8;
+  --dark-color: #3d3229;
+  --dark-grey-color: #d4ccc5;
+  --light-grey-color: #ece6df;
+  --light-color: #fffdf9;
   --white-color: #ffffff;
-  --red-color: #ff0000;
+  --red-color: #c75050;
 
-  font-family: "MapoGoldenPier";
+  font-family: "MaruBuri", "MapoGoldenPier", serif;
   font-size: 20px;
   @media (max-width: 500px) {
     font-size: 4vw;
@@ -72,7 +72,7 @@ $colors: (
 }
 
 button {
-  font-family: "MapoGoldenPier";
+  font-family: "MaruBuri", "MapoGoldenPier", serif;
   font-size: 1rem;
   border: none;
   background-color: transparent;
