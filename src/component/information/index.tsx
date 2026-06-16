@@ -139,6 +139,18 @@ export const Information = () => {
         <LazyDiv className="card information">
           <Information2 />
         </LazyDiv>
+        <LazyDiv className="card information">
+          <div className="info-card">
+            <div className="label">화환 안내</div>
+            <div className="content">
+              축하 화환은 정중히 사양합니다.
+              <br />
+              대신 '사랑의 쌀'로 나눔에 동참하실 수 있습니다.
+              <br />
+              (신청: 천호동성당 사무실 02-470-5821)
+            </div>
+          </div>
+        </LazyDiv>
       </>
     )
   }
@@ -148,6 +160,16 @@ export const Information = () => {
       <Information1 />
       <Information2 />
       <AttendanceInfo />
+      <div className="info-card">
+        <div className="label">화환 안내</div>
+        <div className="content">
+          축하 화환은 정중히 사양합니다.
+          <br />
+          대신 '사랑의 쌀'로 나눔에 동참하실 수 있습니다.
+          <br />
+          (신청: 천호동성당 사무실 02-470-5821)
+        </div>
+      </div>
     </LazyDiv>
   )
 }
