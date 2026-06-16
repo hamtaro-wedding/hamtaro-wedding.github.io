@@ -8,8 +8,8 @@ import {
 } from "../../const"
 import { LazyDiv } from "../lazyDiv"
 
-// 해당 월의 첫 번째 날의 요일과 총 일수를 계산합니다.
-const firstDayOfWeek = WEDDING_DATE.startOf("month").day()
+// 해당 월의 첫 번째 날의 요일과 총 일수를 계산합니다. (월요일 시작 기준)
+const firstDayOfWeek = (WEDDING_DATE.startOf("month").day() + 6) % 7
 const daysInMonth = WEDDING_DATE.daysInMonth()
 
 /**
@@ -62,9 +62,6 @@ export const Calendar = () => {
 
       {/* 달력 영역 */}
       <div className="calendar-wrapper">
-        <div className="head holiday">
-          <span>Su</span>
-        </div>
         <div className="head">
           <span>Mo</span>
         </div>
@@ -83,6 +80,9 @@ export const Calendar = () => {
         <div className="head">
           <span>Sa</span>
         </div>
+        <div className="head holiday">
+          <span>Su</span>
+        </div>
 
         {/* 첫 주 빈 공간 채우기 */}
         {Array.from({ length: firstDayOfWeek }).map((_, i) => (
@@ -93,7 +93,7 @@ export const Calendar = () => {
         {Array.from({ length: daysInMonth }).map((_, i) => {
           const date = i + 1
           const classes = []
-          const isSunday = (i + firstDayOfWeek) % 7 === 0
+          const isSunday = (i + firstDayOfWeek) % 7 === 6
 
           // 일요일 또는 지정된 휴무일일 경우 'holiday' 클래스 추가
           if (isSunday || HOLIDAYS.includes(date)) {
