@@ -77,7 +77,7 @@ export const Calendar = () => {
         <div className="head">
           <span>Fr</span>
         </div>
-        <div className="head">
+        <div className="head saturday">
           <span>Sa</span>
         </div>
         <div className="head holiday">
@@ -94,10 +94,15 @@ export const Calendar = () => {
           const date = i + 1
           const classes = []
           const isSunday = (i + firstDayOfWeek) % 7 === 6
+          const isSaturday = (i + firstDayOfWeek) % 7 === 5
 
           // 일요일 또는 지정된 휴무일일 경우 'holiday' 클래스 추가
           if (isSunday || HOLIDAYS.includes(date)) {
             classes.push("holiday")
+          }
+
+          if (isSaturday) {
+            classes.push("saturday")
           }
 
           const isWeddingDate = date === WEDDING_DATE.date()

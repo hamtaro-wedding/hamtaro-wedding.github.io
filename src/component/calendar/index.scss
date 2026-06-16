@@ -14,11 +14,21 @@
       &.head {
         aspect-ratio: auto;
         background-color: var(--light-grey-color);
+
+        &.saturday > span {
+          color: #2c3659;
+        }
       }
 
       &.holiday {
         > span {
           color: var(--red-color);
+        }
+      }
+
+      &.saturday {
+        > span {
+          color: #2c3659;
         }
       }
 
