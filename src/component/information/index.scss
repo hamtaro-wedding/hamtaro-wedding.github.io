@@ -10,6 +10,17 @@
     }
   }
 
+  @keyframes accordion-close {
+    from {
+      max-height: 30rem;
+      opacity: 1;
+    }
+    to {
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+
   .info-card {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -60,7 +71,13 @@
     .accordion-body {
       padding: 0.8rem 0.5rem;
       overflow: hidden;
-      animation: accordion-open 0.5s ease-out;
+
+      &.opening {
+        animation: accordion-open 0.5s ease-out forwards;
+      }
+      &.closing {
+        animation: accordion-close 0.4s ease-in forwards;
+      }
 
       .account-item {
         display: flex;

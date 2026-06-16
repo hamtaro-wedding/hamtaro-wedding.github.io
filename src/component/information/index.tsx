@@ -14,15 +14,26 @@ const AccountAccordion = ({
   items: { relation: string; name: string; account: string }[]
 }) => {
   const [open, setOpen] = useState(false)
+  const [visible, setVisible] = useState(false)
+
+  const toggle = () => {
+    if (open) {
+      setOpen(false)
+      setTimeout(() => setVisible(false), 400)
+    } else {
+      setVisible(true)
+      requestAnimationFrame(() => setOpen(true))
+    }
+  }
 
   return (
     <div className="accordion">
-      <button className="accordion-header" onClick={() => setOpen(!open)}>
+      <button className="accordion-header" onClick={toggle}>
         <span>{title}</span>
         <span className={`arrow ${open ? "open" : ""}`}>∨</span>
       </button>
-      {open && (
-        <div className="accordion-body">
+      {visible && (
+        <div className={`accordion-body ${open ? "opening" : "closing"}`}>
           {items
             .filter(({ account }) => !!account)
             .map(({ relation, name, account }) => (
