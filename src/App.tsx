@@ -3,43 +3,27 @@ import { Location } from "./component/location"
 import "./App.scss"
 import { Invitation } from "./component/invitation"
 import { Calendar } from "./component/calendar"
-import { Gallery } from "./component/gallery"
 import { Information } from "./component/information"
 import { LazyDiv } from "./component/lazyDiv"
 
-/**
- * 메인 애플리케이션 컴포넌트입니다.
- * 초대장의 각 섹션을 조합하여 화면을 구성합니다.
- *
- * @returns {JSX.Element} 애플리케이션 화면
- */
 function App() {
   return (
     <div className="background">
       <div className="card-view">
         <LazyDiv className="card-group">
-          {/* 메인 커버 섹션 */}
           <Cover />
-
-          {/* 모시는 글 섹션 */}
           <Invitation />
         </LazyDiv>
 
         <LazyDiv className="card-group">
-          {/* 결혼식 날짜 및 달력 섹션 */}
           <Calendar />
-
-          {/* 사진 갤러리 섹션 */}
-          <Gallery />
         </LazyDiv>
 
         <LazyDiv className="card-group">
-          {/* 오시는 길 및 지도 섹션 */}
           <Location />
         </LazyDiv>
 
         <LazyDiv className="card-group">
-          {/* 축의금 및 연락처 정보 섹션 */}
           <Information />
         </LazyDiv>
       </div>
