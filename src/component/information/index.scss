@@ -21,6 +21,13 @@
     }
   }
 
+  @keyframes toast-fade {
+    0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    85% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  }
+
   .info-card {
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
@@ -47,6 +54,21 @@
 
   .accordion {
     margin-top: 0.8rem;
+    position: relative;
+
+    .toast-message {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      z-index: 9999;
+      animation: toast-fade 2s ease-in-out forwards;
+    }
 
     .accordion-header {
       width: 100%;

@@ -15,6 +15,7 @@ const AccountAccordion = ({
 }) => {
   const [open, setOpen] = useState(false)
   const [visible, setVisible] = useState(false)
+  const [toast, setToast] = useState("")
 
   const toggle = () => {
     if (open) {
@@ -23,6 +24,18 @@ const AccountAccordion = ({
     } else {
       setVisible(true)
       requestAnimationFrame(() => setOpen(true))
+    }
+  }
+
+  const copyAccount = async (account: string) => {
+    const numberOnly = account.replace(/[^0-9]/g, "")
+    try {
+      await navigator.clipboard.writeText(numberOnly)
+      setToast(`${numberOnly} 복사되었습니다`)
+      setTimeout(() => setToast(""), 2000)
+    } catch {
+      setToast("복사에 실패했습니다")
+      setTimeout(() => setToast(""), 2000)
     }
   }
 
@@ -44,14 +57,7 @@ const AccountAccordion = ({
                 </div>
                 <Button
                   className="copy-button"
-                  onClick={async () => {
-                    try {
-                      await navigator.clipboard.writeText(account)
-                      alert(account + "\n복사되었습니다.")
-                    } catch {
-                      alert("복사에 실패했습니다.")
-                    }
-                  }}
+                  onClick={() => copyAccount(account)}
                 >
                   복사하기
                 </Button>
@@ -59,6 +65,7 @@ const AccountAccordion = ({
             ))}
         </div>
       )}
+      {toast && <div className="toast-message">{toast}</div>}
     </div>
   )
 }
