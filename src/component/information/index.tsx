@@ -31,7 +31,7 @@ const AccountAccordion = ({
     const numberOnly = account.replace(/[^0-9]/g, "")
     try {
       await navigator.clipboard.writeText(numberOnly)
-      setToast(`${title} 예금주 ${name}의 ${numberOnly} 복사되었습니다`)
+      setToast(`${title} ${name}님의 계좌번호 ${numberOnly}가 복사되었습니다`)
       setTimeout(() => setToast(""), 2000)
     } catch {
       setToast("복사에 실패했습니다")
