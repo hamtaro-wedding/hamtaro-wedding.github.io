@@ -27,11 +27,11 @@ const AccountAccordion = ({
     }
   }
 
-  const copyAccount = async (account: string) => {
+  const copyAccount = async (account: string, name: string) => {
     const numberOnly = account.replace(/[^0-9]/g, "")
     try {
       await navigator.clipboard.writeText(numberOnly)
-      setToast(`${numberOnly} 복사되었습니다`)
+      setToast(`${title} 예금주 ${name}의 ${numberOnly} 복사되었습니다`)
       setTimeout(() => setToast(""), 2000)
     } catch {
       setToast("복사에 실패했습니다")
@@ -57,7 +57,7 @@ const AccountAccordion = ({
                 </div>
                 <Button
                   className="copy-button"
-                  onClick={() => copyAccount(account)}
+                  onClick={() => copyAccount(account, name)}
                 >
                   복사하기
                 </Button>
