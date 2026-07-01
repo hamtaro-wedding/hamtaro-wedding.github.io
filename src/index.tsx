@@ -4,7 +4,7 @@ import App from "./App"
 import { ModalProvider } from "./component/modal"
 
 // 애플리케이션의 루트 요소를 가져와서 렌더링을 시작합니다.
-document.documentElement.style.setProperty('--initial-vh', '${window.innerHeight * 0.01}px')
+document.documentElement.style.setProperty('--initial-vh', `${window.innerHeight * 0.01}px`)
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
